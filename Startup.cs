@@ -35,9 +35,6 @@ namespace netcore_vue {
         public void Configure (IApplicationBuilder app, IHostingEnvironment env) {
             if (env.IsDevelopment ()) {
                 app.UseDeveloperExceptionPage ();
-                app.UseWebpackDevMiddleware (new WebpackDevMiddlewareOptions {
-                    HotModuleReplacement = true
-                });
             } else {
                 app.UseExceptionHandler ("/Home/Error");
                 // app.UseHsts ();
